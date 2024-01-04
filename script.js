@@ -1,17 +1,20 @@
-// let body = document.body
-// let darkMode = document.getElementById("dark-mode")
-// let header = document.getElementById("header")
-// let section = document.getElementById("tea")
-// let about = document.getElementById("about")
-// let button = document.querySelector("button")
-// let logo = document.querySelector(".logo")
-// let list = document.getElementsByTagName(".list > a")
+const burger = document.querySelector(".burger")
+const navbar = document.querySelector("ul")
+const bgSidebar = document.querySelector(".bg-sidebar")
+const body = document.querySelector("body")
+const slides = document.querySelector('.slides');
+const cards = document.querySelectorAll('.card');
+const nextBtn = document.querySelector(".next")
+const prevBtn = document.querySelector(".prev")
 
-// darkMode.addEventListener('click', () => {
-//   darkMode.classList.toggle('active')
-//   header.classList.toggle('active')
-//   section.classList.toggle('active')
-//   about.classList.toggle('active')
-//   button.classList.toggle('active')
-//   logo.classList.toggle('active')
-// })
+const toggleSidebar = () => {
+  burger.classList.toggle("active")
+  navbar.classList.toggle("active")
+  bgSidebar.classList.toggle("active")
+  body.classList.toggle("lock-scroll")
+}
+
+burger.addEventListener("click", toggleSidebar)
+navbar.addEventListener("click", () => {
+  setTimeout(toggleSidebar, 500)
+})

@@ -1,4 +1,5 @@
-*, body {
+*,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,15 +8,13 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
+
 header {
   width: 100%;
   height: 100vh;
   background-color: #F2F2F0;
 }
-header.active {
-  background-color: #3A7560;
-  color: #F2F2F0;
-}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -23,59 +22,71 @@ nav {
   width: 100%;
   height: 70px;
 }
+
 nav h1 {
   margin-left: 30px;
   color: #4E9C81;
   font-size: 2rem;
   cursor: pointer;
 }
-.logo.active {
-  color: #F2F2F0;
+
+.tengah {
+  display: none;
+  width: 50px;
 }
-label {
-  position: absolute;
-  left: -15px;
-  width: 55px;
-  height: 26px;
-  background-color: #3A7560;
-  border-radius: 20px;
+
+.bg-sidebar {
+  top: 70px;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, .1);
+  transition: .3s;
+  visibility: hidden;
+  z-index: -1;
 }
-label:before {
-  position: absolute;
-  content: "";
-  width: 18px;
-  height: 18px;
-  left: 5px;
-  top:4px;
-  border-radius: 50%;
-  background-color: #F2F2F0;
-  transition: .4s;
+
+.bg-sidebar.active {
+  right: 0;
+  visibility: visible;
+  display: block;
 }
-label.active:before {
-  left: 32px;
-  background-color: #3A7560;
-}
-label.active {
-  background-color: #F2F2F0;
-}
+
 nav ul {
   display: flex;
-  position: relative;
   margin-right: 30px;
 }
+
 nav ul li {
   margin-left: 50px;
 }
+
 nav ul li a {
   font-weight: 600;
   color: #444;
 }
+
 nav ul li a:hover {
   color: #111;
 }
-.list.active {
-  color: #F2F2F0;
+
+.burger {
+  display: none;
+  margin-right: 30px;
+  cursor: pointer;
 }
+
+.bar {
+  display: block;
+  margin: 3px 0;
+  width: 25px;
+  height: 3px;
+  border-radius: 3px;
+  background: #F2F2F0;
+  transition: all .3s ease;
+}
+
 .hero {
   display: flex;
   margin: 0 30px;
@@ -83,6 +94,7 @@ nav ul li a:hover {
   align-items: center;
   height: 90vh;
 }
+
 .desc h1 {
   font-size: 2.9rem;
   font-family: 'Montserrat', sans-serif;
@@ -90,6 +102,7 @@ nav ul li a:hover {
   color: #111;
   cursor: default;
 }
+
 .desc p {
   margin-top: 10px;
   width: 75%;
@@ -98,6 +111,7 @@ nav ul li a:hover {
   color: #111;
   cursor: default;
 }
+
 .desc button {
   margin-top: 14px;
   padding: 5px 15px;
@@ -109,29 +123,31 @@ nav ul li a:hover {
   font-size: 1rem;
   cursor: pointer;
 }
+
 .desc button.active {
   background-color: #111;
 }
+
 .desc button:hover {
   background-color: #448971;
 }
+
 section {
   width: 100%;
   height: 100vh;
   background-color: #3A7560;
 }
-section.active {
-  background-color: #F2F2F0;
-}
+
 section h1 {
   margin-bottom: 25px;
   padding-top: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  font-weight:  900;
+  font-weight: 900;
   text-align: center;
   color: #F2F2F0;
 }
+
 .cards {
   display: flex;
   height: 40vh;
@@ -139,60 +155,85 @@ section h1 {
   justify-content: center;
   gap: 60px;
 }
+
 .card {
   width: 250px;
   height: 200px;
   background-color: #F2F2F0;
   border-radius: 4px 4px 0 0;
 }
+
 .card img {
   width: 250px;
   border-radius: 4px 4px 0 0;
 }
+
 .card p {
   font-weight: 700;
   text-align: center;
 }
+
+.slider {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.btn {
+  display: none;
+  width: 100%;
+}
+
 .about {
   width: 100%;
   height: 90vh;
   background-color: #F2F2F0;
 }
-.about.active {
-  background-color: #3A7560;
-}
+
 .about h1 {
   margin-bottom: 120px;
   padding-top: 20px;
   font-size: 2rem;
-  font-weight:  900;
+  font-weight: 900;
   text-align: center;
 }
+
 .container {
   display: flex;
   width: 100%;
   height: 70vh;
 }
+
 .container h2 {
   text-align: center;
 }
+
 .garis {
   width: 4px;
   height: 232px;
   background-color: #111;
 }
+
 .content {
   width: 75%;
 }
+
 .content h2 {
   font-size: 2.5rem;
   font-weight: 900;
 }
+
 .content p {
   text-align: center;
   font-weight: 500;
   font-size: 1.1rem;
 }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -201,17 +242,180 @@ footer {
   height: 70px;
   background-color: #111;
 }
-footer h3, i {
+
+footer h3,
+i {
   color: #F2F2F0;
 }
+
 footer h3 {
   margin-left: 30px;
   font-weight: 600;
 }
+
 footer .sosmed {
   margin-right: 30px;
 }
+
 footer i {
   padding-left: 40px;
   font-size: 2rem;
+}
+
+.lock-scroll {
+  overflow-y: hidden;
+}
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    background: #4E9C81;
+    justify-content: space-between;
+    position: fixed;
+  }
+
+  .bg-sidebar.active {
+    right: 0;
+    visibility: visible;
+    display: block;
+  }
+
+  .tengah {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    margin-bottom: 7px;
+  }
+
+  .burger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+    left: 500px;
+    background: #4E9C81;
+    transition: all ease .3s;
+  }
+
+  ul.active {
+    left: 85px;
+  }
+
+  .logo {
+    color: #F2F2F0;
+  }
+
+  nav ul li {
+    padding: 30px 0;
+  }
+
+  nav ul li a {
+    color: #F2F2F0;
+    padding-right: 60px;
+  }
+
+  header img {
+    display: none;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .desc h1 {
+    margin-top: 150px;
+    font-size: 2rem;
+  }
+
+  .desc p {
+    margin-bottom: 100px;
+    font-size: 15px;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  .slider {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: -1;
+  }
+
+  .slides {
+    padding-left: 25px;
+  }
+
+  .card {
+    margin: 0 0 0 41px;
+  }
+
+  .btn {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .btn button {
+    margin-right: 10px;
+    padding: 5px 15px;
+    border: none;
+    background-color: white;
+    border-radius: 2px;
+    color: #4E9C81;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  section {
+    padding-top: 190px;
+    height: 100vh;
+  }
+
+  .about h1 {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .content {
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  .garis {
+    display: none;
+  }
+
+  footer i {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
 }
