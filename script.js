@@ -36,65 +36,28 @@ const backToggleSidebar = () => {
   }, 1000);
 }
 
-const changeList = () => {
-  list.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeH1 = () => {
-  h1.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeP = () => {
-  p.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeCard = () => {
-  card.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeH2 = () => {
-  h2.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeI = () => {
-  sosmed.forEach(item => {
-    item.classList.toggle("active")
-  })
-}
-
-const changeBtn = () => {
-  button.forEach(item => {
+const change = (param) => {
+  param.forEach(item => {
     item.classList.toggle("active")
   })
 }
 
 burger.addEventListener("click", toggleSidebar)
 navbar.addEventListener("click", backToggleSidebar)
-
 btn.addEventListener("click", () => {
   label.classList.toggle("active")
   logo.classList.toggle("active")
-  changeList()
-  changeH1()
-  changeP()
-  changeBtn()
+  change(list)
+  change(h1)
+  change(p)
+  change(button)
   header.classList.toggle("active")
-  changeCard()
+  change(card)
   section.classList.toggle("active")
   about.classList.toggle("active")
   footer.classList.toggle("active")
-  changeH2()
+  change(h2)
   garis.classList.toggle("active")
   h3.classList.toggle("active")
-  changeI()
+  change(sosmed)
 })
