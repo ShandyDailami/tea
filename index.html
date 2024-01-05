@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page Tea</title>
+  <title>Tea - Landing Page</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="swiper-bundle.min.css">
+  <link rel="icon" href="assets/tea.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,12 +16,15 @@
   <div id="teaList">
     <header id="header">
       <nav>
-        <h1 class="logo" >Tea</h1>
+        <h4 id="logo">Tea</h4>
         <img src="assets/tea.png" alt="" class="tengah">
         <ul>
-          <li><a class="list" href="#header">Home</a></li>
-          <li><a class="list" href="#section">Several Kinds of Tea</a></li>
-          <li><a class="list" href="#about">About</a></li>
+          <li><a id="list" href="#header">Home</a></li>
+          <li><a id="list" href="#section">Several Kinds of Tea</a></li>
+          <li><a id="list" href="#about">About</a></li>
+          <div class="label" id="list">
+            <label id="dark-mode"></label>
+          </div>
         </ul>
         <div class="bg-sidebar"></div>
         <div class="burger">
@@ -40,7 +43,7 @@
           </p>
           <button>View More</button>
         </div>
-        <img src="assets/tea.png" alt="">
+        <img src="assets/tea.png" alt="" width="300px" id="main-img">
       </div>
     </header>
     <section id="section">
@@ -124,7 +127,7 @@
         </div>
       </div>
     </div>
-    <footer>
+    <footer id="footer">
       <h3>
         Created by Shandy
       </h3>
