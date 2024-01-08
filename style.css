@@ -205,6 +205,7 @@ section h1.active {
   color: #3A7560;
 }
 
+
 .cards {
   display: flex;
   height: 40vh;
@@ -448,22 +449,39 @@ footer h3.active {
     padding-right: 60px;
   }
 
-  header img {
-    display: none;
+  .hero {
+    margin: 0;
+    flex-direction: column-reverse;
   }
 
-  .hero {
-    height: 80vh;
+  .hero img {
+
+    margin-top: 100px;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .desc h1 {
-    margin-top: 150px;
-    font-size: 2rem;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .desc p {
-    margin-bottom: 100px;
-    font-size: 15px;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .desc button {
+    padding: 9px 120px;
+    border-radius: 5px;
   }
 
   .cards {
